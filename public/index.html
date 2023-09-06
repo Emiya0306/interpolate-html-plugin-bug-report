@@ -28,7 +28,20 @@
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
+    <div>'%REACT_APP_VARIABLE_1%' === 'TEST'</div>
+    <div>Result: <%= '%REACT_APP_VARIABLE_1%' === 'TEST' %></div>
+    <div>Result: <%= 'TEST' === 'TEST' %></div>
+
+    <div>if ('%REACT_APP_VARIABLE_1%' === 'TEST')</div>
+    <% if ('%REACT_APP_VARIABLE_1%' === 'TEST') { %>
+      true
+    <% } else { %>
+      <!-- The result will be always false. I cannot do any conditions. -->
+      false
+    <% } %>
+
+    <div id="root">
+    </div>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
